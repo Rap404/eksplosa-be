@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_fakta_menarik_fakta_menariks",
+  "info": {
+    "displayName": "fakta menarik",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "judul": {
+      "type": "string"
+    },
+    "deskripsi": {
+      "type": "string"
+    },
+    "gambar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

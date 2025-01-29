@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jawabans",
+  "info": {
+    "singularName": "jawaban",
+    "pluralName": "jawabans",
+    "displayName": "jawaban",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kata": {
+      "type": "string"
+    },
+    "bahasas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::bahasa.bahasa",
+      "inversedBy": "jawabans"
+    },
+    "soals": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::soal.soal",
+      "inversedBy": "jawabans"
+    }
+  }
+}

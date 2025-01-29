@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bahasas",
+  "info": {
+    "singularName": "bahasa",
+    "pluralName": "bahasas",
+    "displayName": "bahasa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "soals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::soal.soal",
+      "mappedBy": "bahasa"
+    },
+    "provinsis": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::provinsi.provinsi",
+      "inversedBy": "bahasas"
+    },
+    "levels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::level.level",
+      "mappedBy": "bahasa"
+    },
+    "jawabans": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::jawaban.jawaban",
+      "mappedBy": "bahasas"
+    }
+  }
+}

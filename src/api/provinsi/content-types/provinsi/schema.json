@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "provinsis",
+  "info": {
+    "singularName": "provinsi",
+    "pluralName": "provinsis",
+    "displayName": "provinsi",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "bahasas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::bahasa.bahasa",
+      "mappedBy": "provinsis"
+    },
+    "fakta_menariks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fakta-menarik.fakta-menariks"
+    }
+  }
+}

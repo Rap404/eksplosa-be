@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "soals",
+  "info": {
+    "singularName": "soal",
+    "pluralName": "soals",
+    "displayName": "soal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pertanyaan": {
+      "type": "string"
+    },
+    "bahasa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bahasa.bahasa",
+      "inversedBy": "soals"
+    },
+    "jawabans": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::jawaban.jawaban",
+      "mappedBy": "soals"
+    },
+    "level": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::level.level",
+      "inversedBy": "soals"
+    },
+    "tipe": {
+      "type": "string"
+    },
+    "jawaban_benar": {
+      "type": "string"
+    }
+  }
+}
